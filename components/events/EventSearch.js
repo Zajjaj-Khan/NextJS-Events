@@ -1,13 +1,14 @@
 import { useRef } from "react";
 import classes from "../events/button.module.css";
 import search from "../events/events-search.module.css";
-function EventSearch() {
+function EventSearch({onSearch}) {
   const yearInputRef = useRef();
   const monthInputRef = useRef();
   function submitHandler(event) {
     event.preventDefault();
     const selectedYear = yearInputRef.current.value;
     const selectedMonth = monthInputRef.current.value;
+    onSearch(selectedYear, selectedMonth)
   }
   return (
     <form className={search.form} onSubmit={submitHandler}>
@@ -37,7 +38,7 @@ function EventSearch() {
           </select>
         </div>
       </div>
-      <button className={classes.btn}>Find Events</button>
+      <button className={classes.btn} onClick={submitHandler}>Find Events</button>
     </form>
   );
 }
