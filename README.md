@@ -14,4 +14,4 @@ yarn dev
 
 ## Getting Started
 
-This is a Simple and Basic NextJs website i built to get similair with Nextjs and its core concepts, Anyways am Loving it
+### This is a Simple and Basic NextJs website I built to get familiar with Nextjs and its core concepts, I am Loving it
